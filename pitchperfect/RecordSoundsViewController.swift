@@ -42,7 +42,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         let recordingName = today.appending(".wav")
         print(recordingName)
-        //파일명 변경해주는 부분 끝
+        //끝
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
         print(filePath as Any)
@@ -69,10 +69,17 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
-            //code here
             
         }else{
             print("Recording was not successful")
+            //녹음 실패시 생성한 파일 삭제해주는 부분 시작
+            let fileDelete = FileManager.default
+            do{
+                try fileDelete.removeItem(at: audioRecorder.url)
+            }catch{
+                print("Failed to delete the unsuccessful audio file ")
+            }
+            //끝
         }
     }
     

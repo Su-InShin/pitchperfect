@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3628C2821E2B928A00FFE41E /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628C2811E2B928A00FFE41E /* HistoryTableViewController.swift */; };
+		3628C2841E2BC7E000FFE41E /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628C2831E2BC7E000FFE41E /* HistoryTableViewCell.swift */; };
 		36662D3F1E1CBCD900D74EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36662D3E1E1CBCD900D74EC6 /* AppDelegate.swift */; };
 		36662D411E1CBCD900D74EC6 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36662D401E1CBCD900D74EC6 /* RecordSoundsViewController.swift */; };
 		36662D441E1CBCD900D74EC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36662D421E1CBCD900D74EC6 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		3628C2811E2B928A00FFE41E /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		3628C2831E2BC7E000FFE41E /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		36662D3B1E1CBCD900D74EC6 /* pitchperfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pitchperfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36662D3E1E1CBCD900D74EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36662D401E1CBCD900D74EC6 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				36662D471E1CBCD900D74EC6 /* LaunchScreen.storyboard */,
 				36662D4A1E1CBCD900D74EC6 /* Info.plist */,
 				3628C2811E2B928A00FFE41E /* HistoryTableViewController.swift */,
+				3628C2831E2BC7E000FFE41E /* HistoryTableViewCell.swift */,
 			);
 			path = pitchperfect;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3628C2841E2BC7E000FFE41E /* HistoryTableViewCell.swift in Sources */,
 				36662D411E1CBCD900D74EC6 /* RecordSoundsViewController.swift in Sources */,
 				36E171241E279DC5003A92A3 /* PlaySoundsViewController.swift in Sources */,
 				36662D3F1E1CBCD900D74EC6 /* AppDelegate.swift in Sources */,

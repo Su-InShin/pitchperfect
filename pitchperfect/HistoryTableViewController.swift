@@ -10,6 +10,8 @@ import UIKit
 
 class HistoryTableViewController: UITableViewController {
 
+    var filelist = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,34 +20,51 @@ class HistoryTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let filemanager = FileManager.default
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+        do{
+            filelist = try filemanager.contentsOfDirectory(atPath: dirPath)
+        }catch{
+            print("Making the file list was failed")
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return filelist.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableCell", for: indexPath) as! HistoryTableViewCell
 
         // Configure the cell...
+        let row = indexPath.row
+        cell.HistoryFileName.text = filelist[row]
 
         return cell
     }
-    */
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PlaySelectedFile"{
+            let playSoundsVC = segue.destination as! PlaySoundsViewController
+            let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+            let myIndexPath = self.tableView.indexPathForSelectedRow!
+            let row = myIndexPath.row
+            let pathArray = [dirPath, filelist[row]]
+            let filePath = URL(string: pathArray.joined(separator: "/"))
+            let recordedAudioURL = filePath
+            playSoundsVC.recordedAudioURL = recordedAudioURL
+            
+            
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
