@@ -34,6 +34,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         RecordButton.isEnabled = false
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+        // MARK: - Add on 01.16
         //파일명 변경해주는 부분 시작
         let format = DateFormatter()
         format.dateFormat = "yyyy_MM_dd_HH_mm"
@@ -72,6 +73,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             
         }else{
             print("Recording was not successful")
+            // MARK: - Add on 01.16
             //녹음 실패시 생성한 파일 삭제해주는 부분 시작
             let fileDelete = FileManager.default
             do{

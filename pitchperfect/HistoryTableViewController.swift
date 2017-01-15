@@ -14,12 +14,8 @@ class HistoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // MARK: - Make List of Files
+        //디렉토리내에 존재하는 모든 파일의 이름을 읽어와서 배열에 저장해주는 부분
         let filemanager = FileManager.default
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         do{
@@ -27,6 +23,7 @@ class HistoryTableViewController: UITableViewController {
         }catch{
             print("Making the file list was failed")
         }
+        //끝
     }
 
     // MARK: - Table view data source
@@ -52,6 +49,8 @@ class HistoryTableViewController: UITableViewController {
     }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // MARK: - Segue with the selected cell
+        //셀을 선택할 시 PlaySoundView로 세그가 넘어가도록 설정해주는 부분. 해당 셀의 파일 URL을 같이 보내준다.
         if segue.identifier == "PlaySelectedFile"{
             let playSoundsVC = segue.destination as! PlaySoundsViewController
             let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
