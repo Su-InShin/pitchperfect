@@ -1,0 +1,15 @@
+Kick기능소개:
+  history기능으로서 파일이 녹음되면 history버튼 클릭시에 파일들을 읽어와 테이블뷰를 생성한다.
+  새로운 녹음시에 녹음실패시 해당파일을 삭제한다.
+  history테이블에서 원하는 파일의 셀을 선택하면 Play화면으로 넘어가서 기능들을 확인해볼 수 있다.
+  
+  관련동영상은 kick2.mov파일로 확인해볼 수 있다.
+  
+  MVC패턴설계는 박종욱(Ned)튜터님의 도움이 있었습니다.
+  참조한 사이트들: 
+  1: 디렉토리내 파일목록 읽기
+  http://avilos.codes/mobile/ios-swift/ios-swift%EC%97%90%EC%84%9C-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EC%B2%98%EB%A6%AC/
+  2: 테이블뷰 만들기
+  http://avilos.codes/mobile/ios-swift/ios-swift%EC%97%90%EC%84%9C-tableview%ED%85%8C%EC%9D%B4%EB%B8%94%EB%B7%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0/
+  3: 현재 날짜와 시간얻기
+  http://blog.naver.com/PostView.nhn?blogId=seotaji&logNo=220326416045&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1
