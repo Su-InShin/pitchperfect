@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3628C2821E2B928A00FFE41E /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628C2811E2B928A00FFE41E /* HistoryTableViewController.swift */; };
 		36662D3F1E1CBCD900D74EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36662D3E1E1CBCD900D74EC6 /* AppDelegate.swift */; };
 		36662D411E1CBCD900D74EC6 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36662D401E1CBCD900D74EC6 /* RecordSoundsViewController.swift */; };
 		36662D441E1CBCD900D74EC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36662D421E1CBCD900D74EC6 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3628C2811E2B928A00FFE41E /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		36662D3B1E1CBCD900D74EC6 /* pitchperfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pitchperfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36662D3E1E1CBCD900D74EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36662D401E1CBCD900D74EC6 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				36662D451E1CBCD900D74EC6 /* Assets.xcassets */,
 				36662D471E1CBCD900D74EC6 /* LaunchScreen.storyboard */,
 				36662D4A1E1CBCD900D74EC6 /* Info.plist */,
+				3628C2811E2B928A00FFE41E /* HistoryTableViewController.swift */,
 			);
 			path = pitchperfect;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				36E171241E279DC5003A92A3 /* PlaySoundsViewController.swift in Sources */,
 				36662D3F1E1CBCD900D74EC6 /* AppDelegate.swift in Sources */,
 				36E171261E28A5ED003A92A3 /* playsoundsviewcontroller-audio.swift in Sources */,
+				3628C2821E2B928A00FFE41E /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

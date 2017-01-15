@@ -46,13 +46,26 @@
                                     <action selector="Stop_Recording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x8W-VM-rXQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETx-ng-Fhu">
+                                <rect key="frame" x="-5" y="63" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="4E7-fi-8qG"/>
+                                    <constraint firstAttribute="width" constant="64" id="gpe-fA-fAd"/>
+                                </constraints>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <segue destination="Jk8-2e-NHO" kind="show" id="h4W-rn-D5O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ETx-ng-Fhu" secondAttribute="trailing" constant="300" id="Ri9-lJ-uRU"/>
                             <constraint firstItem="aAZ-B9-3hs" firstAttribute="centerX" secondItem="Yvh-LS-Lkq" secondAttribute="centerX" id="VK5-nO-BrF"/>
                             <constraint firstItem="aAZ-B9-3hs" firstAttribute="top" secondItem="Yvh-LS-Lkq" secondAttribute="bottom" constant="-1.5" id="WJa-7m-lD6"/>
                             <constraint firstItem="Yvh-LS-Lkq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aaJ-7O-pub"/>
                             <constraint firstItem="Ddj-ds-4Kh" firstAttribute="top" secondItem="aAZ-B9-3hs" secondAttribute="bottom" constant="8" id="bY4-Xr-HDI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ETx-ng-Fhu" secondAttribute="bottom" constant="540" id="byT-N5-CfV"/>
                             <constraint firstItem="Yvh-LS-Lkq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eqe-is-xRu"/>
                             <constraint firstItem="Ddj-ds-4Kh" firstAttribute="centerX" secondItem="aAZ-B9-3hs" secondAttribute="centerX" constant="-0.5" id="lDS-RL-L9O"/>
                         </constraints>
@@ -187,7 +200,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhy-Cg-6S3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="139"/>
+            <point key="canvasLocation" x="2441" y="417"/>
+        </scene>
+        <!--History Table View Controller-->
+        <scene sceneID="kA9-64-dPy">
+            <objects>
+                <tableViewController id="Jk8-2e-NHO" customClass="HistoryTableViewController" customModule="pitchperfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ymw-f1-SUE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" id="CmP-lY-UIE">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select the file" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJ3-oW-NlC">
+                                    <rect key="frame" x="0.0" y="12" width="315" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3i-Sk-uxw">
+                                    <rect key="frame" x="315" y="7" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="HKD-Qk-eim"/>
+                                    </constraints>
+                                    <state key="normal" title="Done"/>
+                                    <connections>
+                                        <segue destination="nAd-F4-HeV" kind="show" id="WC9-Wi-n9F"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ILD-ip-gHA">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ILD-ip-gHA" id="WSE-Bd-xQa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jk8-2e-NHO" id="AVV-6q-uXC"/>
+                            <outlet property="delegate" destination="Jk8-2e-NHO" id="28T-JN-gAw"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YpZ-8c-ywk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="909"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GI6-bI-fEY">
@@ -218,4 +281,7 @@
         <image name="Slow" width="90" height="90"/>
         <image name="Stop" width="155" height="155"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WC9-Wi-n9F"/>
+    </inferredMetricsTieBreakers>
 </document>
