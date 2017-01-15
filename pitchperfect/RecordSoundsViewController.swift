@@ -34,7 +34,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         RecordButton.isEnabled = false
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-        let recordingName = "recordedVoice.wav"
+        //파일명 변경해주는 부분 시작
+        let format = DateFormatter()
+        format.dateFormat = "yyyy_MM_dd_HH_mm"
+        let today = format.string(from: NSDate() as Date)
+        
+        
+        let recordingName = today.appending(".wav")
+        print(recordingName)
+        //파일명 변경해주는 부분 끝
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
         print(filePath as Any)
@@ -61,6 +69,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+            //code here
+            
         }else{
             print("Recording was not successful")
         }
